@@ -72,25 +72,6 @@
 - 설정과 브러시 프리셋은 `%APPDATA%\CensorStudio`에 저장됩니다.
 - 작업 보존 파일은 같은 폴더의 `session`에 저장되며, 1.1.0에서 저장한 작업을 이어서 열 수 있습니다. 이 파일에는 작업 이미지가 들어 있습니다.
 
-## 소스에서 실행 및 빌드
-
-Windows x64에서 Python 3.14로 실행합니다.
-
-```powershell
-py -3.14 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe run_app.py
-```
-
-설치 파일을 만들려면 Inno Setup 6을 설치한 뒤 아래를 실행합니다. 설치 위치가 다르면 `-InnoSetup`으로 `ISCC.exe` 경로를 지정합니다.
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install PyInstaller==6.22.3 pyinstaller-hooks-contrib==2026.10
-.\packaging\build.ps1
-```
-
-설치 파일은 `dist\CensorStudio-Setup-1.1.1.exe`에 생성됩니다.
-
 ## 라이선스
 
 Censor Studio 자체 소스와 문서는 [MIT 라이선스](LICENSE)로 배포합니다. 번들 라이브러리의 라이선스와 Qt 소스는 [제3자 소프트웨어 안내](THIRD-PARTY.md)에서 확인할 수 있습니다.
